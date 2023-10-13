@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/ontology#> .
+
+# Define the Building class
+ex:Building rdf:type owl:Class ;
+    rdfs:label "Building" ;
+    rdfs:comment "A protected building in the city of Madrid." .
+
+# Define datatype property for building's catalog number
+ex:hasCatalogNumber rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Catalog Number" ;
+    rdfs:comment "The catalog number of the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for current protection status
+ex:hasCurrentProtectionStatus rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Current Protection Status" ;
+    rdfs:comment "The current protection status of the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for protection status in 1997
+ex:hasProtectionStatus97 rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Protection Status in 1997" ;
+    rdfs:comment "The protection status of the building in 1997." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for building name
+ex:hasBuildingName rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Building Name" ;
+    rdfs:comment "The name of the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for homogeneous code
+ex:hasHomogeneousCode rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Homogeneous Code" ;
+    rdfs:comment "The homogeneous code of the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for observations
+ex:hasObservations rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Observations" ;
+    rdfs:comment "Observations or notes about the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+# Define datatype property for data source (e.g., expediente)
+ex:hasDataSource rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Data Source" ;
+    rdfs:comment "The data source or reference for information about the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:anyURI .
+
+# Define datatype property for URL link to the building's information
+ex:hasLink rdf:type owl:DatatypeProperty ;
+    rdfs:label "has Link" ;
+    rdfs:comment "A URL link to detailed information about the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:anyURI .
+
+# Define datatype property for coordinates in UTM (ETRS)
+ex:hasUTMCoordinates rdf:type owl:DatatypeProperty ;
+    rdfs:label "has UTM Coordinates" ;
+    rdfs:comment "The UTM coordinates (UTM Zone) of the building." ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
