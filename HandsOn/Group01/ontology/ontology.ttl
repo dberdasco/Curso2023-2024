@@ -74,6 +74,7 @@ ex:hasAddress rdf:type owl:ObjectProperty ;
     rdfs:comment "Relates a location to its address." ;
     rdfs:domain ex:Location ;
     rdfs:range ex:Address .
+    ex:MyLocation owl:sameAs <https://www.wikidata.org/wiki/Q8383697> .
 
 # Define datatype properties for address components
 ex:hasStreetName rdf:type owl:DatatypeProperty ;
